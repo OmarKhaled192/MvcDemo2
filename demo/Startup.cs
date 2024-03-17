@@ -17,7 +17,7 @@ namespace demo
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,27 +32,30 @@ namespace demo
                 app.UseStatusCodePagesWithReExecute("/Home/Error");
             }
 
-            app.UseRouting();
+            app.UseStaticFiles();
 
+            app.UseRouting();
+            
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
+                //endpoints.MapGet("/", async context =>
+                //{
+                //    await context.Response.WriteAsync("Hello Omar!");
+                //});
+                endpoints.MapGet("/Omar", new RequestDelegate(async context =>
                 {
                     await context.Response.WriteAsync("Hello Omar!");
-                });
-                endpoints.MapGet("/Hamada", new RequestDelegate(async context =>
-                {
-                    await context.Response.WriteAsync("Hello Hamada!");
                 }));
                 endpoints.MapControllerRoute(
                    name: "Default",
-                   pattern: "{controller=Movies}/{action=Index}/{id:int?}"
+                   pattern: "{controller=Home}/{action=Index}/{id:int?}"
                  );
                 endpoints.MapGet("/BadRequest", async context =>
                 {
                     context.Response.StatusCode = 400;
                     new BadRequestObjectResult("Error");
                 });
+
             });
         }
     }

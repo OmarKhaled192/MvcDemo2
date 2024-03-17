@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\L-340\\source\\repos\\MVC_Session2_Solution\\demo\\demo.csproj": {}
+    "C:\\xampp\\MVC_Assignments\\MvcDemo2\\demo\\demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\L-340\\source\\repos\\MVC_Session2_Solution\\demo\\demo.csproj": {
+    "C:\\xampp\\MVC_Assignments\\MvcDemo2\\demo\\demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L-340\\source\\repos\\MVC_Session2_Solution\\demo\\demo.csproj",
+        "projectUniqueName": "C:\\xampp\\MVC_Assignments\\MvcDemo2\\demo\\demo.csproj",
         "projectName": "demo",
-        "projectPath": "C:\\Users\\L-340\\source\\repos\\MVC_Session2_Solution\\demo\\demo.csproj",
-        "packagesPath": "C:\\Users\\L-340\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L-340\\source\\repos\\MVC_Session2_Solution\\demo\\obj\\",
+        "projectPath": "C:\\xampp\\MVC_Assignments\\MvcDemo2\\demo\\demo.csproj",
+        "packagesPath": "C:\\Users\\omar.khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\xampp\\MVC_Assignments\\MvcDemo2\\demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\L-340\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\omar.khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,16 +34,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
